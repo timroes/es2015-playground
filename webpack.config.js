@@ -1,9 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+
 module.exports = {
-  // context: path.resolve(__dirname, './src'),
   entry: {
-    app: ['./src/index.js'],
+    app: ['whatwg-fetch', './src/index.js']
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
     filename: '[name].bundle.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, './dist'),
+    contentBase: path.join(__dirname, './src'),
     compress: true,
     port: 9000
   }
